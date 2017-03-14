@@ -46,3 +46,7 @@ def display_mult_flat(start, stop):
     plt.show()
 
 x_train, y_train = TRAIN_SIZE(55000)
+#
+# display_digit(0)
+
+display_mult_flat(0,400)
