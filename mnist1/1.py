@@ -1,15 +1,13 @@
 from tensorflow.examples.tutorials.mnist import input_data
-
-mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 import matplotlib.pyplot as plt
 import numpy as np
 import random as ran
+import tensorflow as tf
 
 
 
 
-
-
+mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
 def TRAIN_SIZE(num):
     print ('Total Training Images in Dataset = ' + str(mnist.train.images.shape))
@@ -49,4 +47,24 @@ x_train, y_train = TRAIN_SIZE(55000)
 #
 # display_digit(0)
 
-display_mult_flat(0,400)
+# display_mult_flat(0,4)
+
+sess = tf.Session()
+
+x = tf.placeholder(tf.float32, shape=[None, 784])
+y_ = tf.placeholder(tf.float32, shape=[None, 10])
+
+W = tf.Variable(tf.zeros([784,10]))
+b = tf.Variable(tf.zeros([10]))
+
+y = tf.nn.softmax(tf.matmul(x,W) + b)
+
+sess.run(tf.global_variables_initializer())
+
+# print(sess.run(y, feed_dict={x: x_train}))
+
+# print(sess.run(tf.zeros([4])))
+# print(sess.run(tf.nn.softmax(tf.constant([0.1, 0.005, 2]))))
+
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
+
