@@ -4,7 +4,7 @@ import numpy as np
 import random as ran
 import tensorflow as tf
 
-
+np.set_printoptions(threshold=np.nan)
 
 
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -59,12 +59,18 @@ b = tf.Variable(tf.zeros([10]))
 
 y = tf.nn.softmax(tf.matmul(x,W) + b)
 
-sess.run(tf.global_variables_initializer())
 
-# print(sess.run(y, feed_dict={x: x_train}))
+# ta=np.array(sess.run(y, feed_dict={x: x_train}))
+sess.run(y, feed_dict={x: x_train})
+# print(ta.shape)
+# print(sess.run(tf.log(y)))
 
+# nums=np.array(sess.run(y, feed_dict={x: x_train}))
+#
+# print(nums)
 # print(sess.run(tf.zeros([4])))
 # print(sess.run(tf.nn.softmax(tf.constant([0.1, 0.005, 2]))))
+#
 
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
-
+sess.run(tf.global_variables_initializer())
+print(sess.run(cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),1))))
