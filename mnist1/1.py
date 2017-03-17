@@ -43,6 +43,18 @@ def display_mult_flat(start, stop):
     plt.imshow(images, cmap=plt.get_cmap('gray_r'))
     plt.show()
 
+def display_compare(num):
+    # THIS WILL LOAD ONE TRAINING EXAMPLE
+    x_train = mnist.train.images[num,:].reshape(1,784)
+    y_train = mnist.train.labels[num,:]
+    # THIS GETS OUR LABEL AS A INTEGER
+    label = y_train.argmax()
+    # THIS GETS OUR PREDICTION AS A INTEGER
+    prediction = sess.run(y, feed_dict={x: x_train}).argmax()
+    plt.title('Prediction: %d Label: %d' % (prediction, label))
+    plt.imshow(x_train.reshape([28,28]), cmap=plt.get_cmap('gray_r'))
+    plt.show()
+
 x_train, y_train = TRAIN_SIZE(55000)
 #
 # display_digit(0)
@@ -61,7 +73,7 @@ y = tf.nn.softmax(tf.matmul(x,W) + b)
 
 
 # ta=np.array(sess.run(y, feed_dict={x: x_train}))
-sess.run(y, feed_dict={x: x_train})
+# sess.run(y, feed_dict={x: x_train})
 # print(ta.shape)
 # print(sess.run(tf.log(y)))
 
@@ -70,7 +82,42 @@ sess.run(y, feed_dict={x: x_train})
 # print(nums)
 # print(sess.run(tf.zeros([4])))
 # print(sess.run(tf.nn.softmax(tf.constant([0.1, 0.005, 2]))))
-#
 
-sess.run(tf.global_variables_initializer())
-print(sess.run(cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),1))))
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),1))
+
+x_train, y_train = TRAIN_SIZE(5500)
+x_test, y_test = TEST_SIZE(10000)
+LEARNING_RATE = 0.1
+TRAIN_STEPS = 2500
+
+init = tf.global_variables_initializer()
+
+sess.run(init)
+
+training = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cross_entropy)
+correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
+for i in range(TRAIN_STEPS+1):
+    sess.run(training, feed_dict={x: x_train, y_: y_train})
+    if i%100 == 0:
+        print('Training Step:' + str(i) + '  Accuracy =  ' + str(sess.run(accuracy, feed_dict={x: x_test, y_: y_test})) + '  Loss = ' + str(sess.run(cross_entropy, {x: x_train, y_: y_train})))
+
+# for i in range(10):
+#     plt.subplot(2, 5, i+1)
+#     weight = sess.run(W)[:,i]
+#     plt.title(i)
+#     plt.imshow(weight.reshape([28,28]), cmap=plt.get_cmap('seismic'))
+#     frame1 = plt.gca()
+#     frame1.axes.get_xaxis().set_visible(False)
+#     frame1.axes.get_yaxis().set_visible(False)
+#
+# plt.show()
+
+# x_train, y_train = TRAIN_SIZE(1)
+# display_digit(0)
+#
+# answer = sess.run(y, feed_dict={x: x_train})
+# print(answer.argmax())
+
+display_compare(ran.randint(0, 55000))
