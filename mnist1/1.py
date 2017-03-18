@@ -84,16 +84,16 @@ y = tf.nn.softmax(tf.matmul(x,W) + b)
 # print(nums)
 # print(sess.run(tf.zeros([4])))
 # print(sess.run(tf.nn.softmax(tf.constant([0.1, 0.005, 2]))))
-
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),1))
-init = tf.global_variables_initializer()
-
-
-
-sess = tf.Session()
-sess.run(init)
-tf.train.write_graph(sess.graph_def, './sum', 'graph.pbtxt')
-
+#
+# cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y),1))
+# init = tf.global_variables_initializer()
+#
+#
+#
+# sess = tf.Session()
+# sess.run(init)
+# tf.train.write_graph(sess.graph_def, './sum', 'graph.pbtxt')
+display_digit(100)
 
 # x_train, y_train = TRAIN_SIZE(5500)
 # x_test, y_test = TEST_SIZE(10000)
