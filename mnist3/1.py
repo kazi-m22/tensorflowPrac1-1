@@ -15,3 +15,20 @@ W = tf.Variable(tf.zeros([784,10]),name='w')
 b = tf.Variable(tf.zeros([10]),name='b')
 
 y = tf.nn.softmax(tf.matmul(x,W) + b)
+
+loss = -tf.reduce_sum(y_ * tf.log(y))
+
+train_step = tf.train.GradientDescentOptimizer(0.01).minimize(loss)
+
+sess = tf.Session()
+
+init = tf.global_variables_initializer()
+sess.run(init)
+
+for i in range(5000):
+    batch_xs, batch_ys = mnist.train.next_batch(100)
+    train_step.run({x: batch_xs, y_: batch_ys}, sess)
+x_test = mnist.test.images[1:2,:]
+
+answer = sess.run(y, feed_dict={x: x_test})
+print(answer.argmax())
