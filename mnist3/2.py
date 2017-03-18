@@ -1,6 +1,8 @@
 from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
 import matplotlib.pyplot as plt
+
+
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
 
@@ -32,3 +34,16 @@ for i in range(5000):
 
 _w=w.eval(sess)
 _b=b.eval(sess)
+
+# print(_w ,_b)
+
+sess.close()
+
+#exporting
+
+x_m = tf.placeholder(tf.float32, shape=[None, 784], name='input')
+y_m = tf.nn.softmax(tf.matmul(x_m,_w) + _b,name="output")
+
+sess_m = tf.Session()
+sess_m.run(tf.global_variables_initializer())
+tf.train.write_graph(sess_m.graph,'./model','mnistmodel.pb')
