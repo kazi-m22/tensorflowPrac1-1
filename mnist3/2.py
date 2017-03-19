@@ -25,7 +25,7 @@ trainer= tf.train.GradientDescentOptimizer(0.01).minimize(loss)
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
-for i in range(5000):
+for i in range(train_steps):
     batch_xs, batch_ys = mnist.train.next_batch(100)
     trainer.run({x: batch_xs, y_un: batch_ys}, sess)
 
