@@ -32,21 +32,21 @@ for i in range(5000):
     train_step.run({x: batch_xs, y_: batch_ys}, sess)
 
 
-_w=w.eval(sess)
-_b=b.eval(sess)
+w_value=w.eval(sess)
+b_value=b.eval(sess)
 
 sess.close()
 
 # # Create new graph for exporting
-g_2 = tf.Graph()
-with g_2.as_default():
-    x_2 = tf.placeholder("float", [None, 784], name="input")
-    y_2 = tf.nn.softmax(tf.matmul(x_2, _w) + _b, name="output")
+model_graph = tf.Graph()
+with model_graph.as_default():
+    x_model = tf.placeholder("float", [None, 784], name="input")
+    y_model = tf.nn.softmax(tf.matmul(x_model, w_value) + b_value, name="output")
 
     sess_2 = tf.Session()
     sess_2.run(tf.global_variables_initializer())
 
-    tf.train.write_graph(g_2.as_graph_def(), './model','mn.pb', as_text=False)
+    tf.train.write_graph(model_graph.as_graph_def(), './model','mn.pb', as_text=False)
 
 
 # x_test = mnist.test.images[1:2,:]
