@@ -11,7 +11,6 @@ train_steps=2500
 x_train=mnist.train.images[:num,:]
 y_train=mnist.train.labels[:num,:]
 
-
 x = tf.placeholder(tf.float32, shape=[None, 784],name='input_m')
 y_un = tf.placeholder(tf.float32, shape=[None, 10],name='y_un')
 
@@ -21,18 +20,14 @@ b = tf.Variable(tf.zeros([10]),name='b')
 y = tf.nn.softmax(tf.matmul(x,w) + b,name='output_known')
 
 loss = -tf.reduce_sum(y_un * tf.log(y))
-
 trainer= tf.train.GradientDescentOptimizer(0.01).minimize(loss)
 
 sess = tf.Session()
-
 sess.run(tf.global_variables_initializer())
 
 for i in range(5000):
     batch_xs, batch_ys = mnist.train.next_batch(100)
     trainer.run({x: batch_xs, y_un: batch_ys}, sess)
-
-
 
 w_value=w.eval(sess)
 b_value=b.eval(sess)
