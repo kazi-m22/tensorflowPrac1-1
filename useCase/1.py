@@ -6,13 +6,13 @@ from tensorflow.python.platform import gfile
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 sess= tf.Session()
-# print("load graph")
+print("load graph")
 with gfile.FastGFile("./model/mn.pb",'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     sess.graph.as_default()
     tf.import_graph_def(graph_def, name='')
-# print("map variables")
+print("map variables")
 
 def PIL2array(img):
     return np.array(img.getdata(),
@@ -37,5 +37,5 @@ fa=na.reshape([1,784])
 x=tf.get_default_graph().get_tensor_by_name('input:0')
 y_test=tf.get_default_graph().get_tensor_by_name('output:0')
 answer = sess.run(y_test, feed_dict={x: fa})
-print(answer.argmax())
+print(answer)
 
