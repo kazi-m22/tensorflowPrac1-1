@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div style="width: 100%;">
+  
+</div>
+
+<canvas id="c" width="128px" height="128px" style="border: 2px solid #ddd"></canvas>
+<br>
+<button onclick="saveImageAs();">Save Image</button>
+<br>
+<div id="buttons">
+  <input type="button" id="clear" value="Clear" onclick="clearImage()">
+</div>
+
+<button onclick="copyURL();" onmouseover="saveImageAs();">Copy Image URL</button>
+<h1>{{name}}</h1>
+
+<script>
+
+var el = document.getElementById('c');
+var ctx = el.getContext('2d');
+var isDrawing;
+ctx.lineWidth=2;
+
+el.onmousedown = function(e) {
+  isDrawing = true;
+  ctx.moveTo(e.clientX, e.clientY);
+};
+el.onmousemove = function(e) {
+  if (isDrawing) {
+    ctx.lineTo(e.clientX, e.clientY);
+    ctx.stroke();
+  }
+};
+el.onmouseup = function() {
+  isDrawing = false;
+};
+
+
+var dataURL;
+
+function saveImageAs () {
+  var canvas = document.getElementById('c');
+  dataURL = canvas.toDataURL();
+  //document.write(dataURL);
+  
+};
+
+function clearImage(){
+
+var canvas = document.getElementById('c');
+var context = canvas.getContext('2d');
+
+document.getElementById('clear').addEventListener('click', function() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.beginPath();
+}, false);
+};
+
+function copyURL(){
+  copyToClipboard(dataURL);
+};
+
+function copyToClipboard(text) {
+  window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+
+</script>
+
+</body>
+</html>

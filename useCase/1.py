@@ -37,5 +37,5 @@ fa=na.reshape([1,784])
 x=tf.get_default_graph().get_tensor_by_name('input:0')
 y_test=tf.get_default_graph().get_tensor_by_name('output:0')
 answer = sess.run(y_test, feed_dict={x: fa})
-print(answer)
+print(np.argmax(answer))
 
