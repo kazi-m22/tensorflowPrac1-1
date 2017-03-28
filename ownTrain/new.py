@@ -62,8 +62,6 @@ while i< 10:
         final = final + fa2
         j+=1
 
-
-
     f = final + f
 
     i+=1
@@ -73,7 +71,7 @@ n1=0
 for l1 in range(0,10):
     for l2 in range(0,120):
         label.append(l1)
-print(label)
+print(label[500])
 
 # x=tf.get_default_graph().get_tensor_by_name('input:0')
 # y_test=tf.get_default_graph().get_tensor_by_name('output:0')
