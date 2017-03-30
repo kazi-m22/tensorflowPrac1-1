@@ -7,19 +7,17 @@ imgExt = ("png","jpg","jpeg")
 
 def PIL2array(img):
     return np.array(img.getdata(),
-                    np.uint8).reshape(img.size[1], img.size[0], 3)
+                    np.uint8).reshape(img.size[1], img.size[0])
 
 
 for filename in glob2.glob('data/*/**.*'):
     if((path.splitext(filename)[1][1:]) in imgExt):
 
         im = Image.open(filename)
-        threshold = 200
         im = im.resize((28, 28), Image.ANTIALIAS)
-        im = im.point(lambda p: p > threshold and 255)
 
         na = PIL2array(im)
-        na = na[:, :, 0]
+        # na = na[:, :]
 
         img = (na > na.mean()) * 255
         np.place(na, na < 255, 1)
