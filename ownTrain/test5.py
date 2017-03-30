@@ -30,10 +30,10 @@ for filename in glob2.glob('data/*/**.*'):
                 image_list.append(na[i][j])
 
 
-print(image_list[500])
+print(len(image_list))
 # print(image_list)
 
-label = []
+label = [10]
 
 for l1 in range(0,10):
     for l2 in range(0,120):

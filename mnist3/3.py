@@ -16,9 +16,10 @@ mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 #     tf.import_graph_def(graph_def, name='')
 # print("map variables")
 
-x_test = mnist.test.images[:, :]
-im = x_test
+# x_test = mnist.test.images[:, :]
+# im = x_test
 
+label_test=mnist.train.labels[0:1,:]
 # x=tf.get_default_graph().get_tensor_by_name('input:0')
 # y_test=tf.get_default_graph().get_tensor_by_name('output:0')
 # answer = sess.run(y_test, feed_dict={x: im})
@@ -29,4 +30,4 @@ im = x_test
 # plt.imshow(im, cmap=plt.get_cmap('gray_r'))
 # plt.show()
 
-print(x_test.shape)
+print(label_test)

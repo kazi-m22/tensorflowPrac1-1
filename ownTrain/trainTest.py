@@ -40,13 +40,10 @@ for l1 in range(0,10):
         label.append(l1)
 # print(label[500])
 
-counter=[]
-for i in range(1200):
-    counter.append(i)
+image_data=np.array(image_list)
 
-image_data= np.column_stack((counter,image_list))
+print(image_data.shape)
 
-print(image_list[0].shape)
 # num=5000
 # train_steps=2500
 #
