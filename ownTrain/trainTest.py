@@ -49,42 +49,42 @@ image_data=np.array(image_list)
 label_data=np.array(label)
 print(label_data.shape)
 
-# num=5000
-# train_steps=2500
-#
+num=5000
+train_steps=50000
+
 # x_train=image_list[:1200,:]
 # y_train=label[:1200,:]
-#
-# x = tf.placeholder(tf.float32, shape=[None, 784],name='input_m')
-# y_un = tf.placeholder(tf.float32, shape=[None, 10],name='y_un')
-#
-# w = tf.Variable(tf.zeros([784,10]),name='w')
-# b = tf.Variable(tf.zeros([10]),name='b')
-#
-# y = tf.nn.softmax(tf.matmul(x,w) + b,name='output_known')
-#
-# loss = -tf.reduce_sum(y_un * tf.log(y))
-# trainer= tf.train.GradientDescentOptimizer(0.01).minimize(loss)
-#
-# sess = tf.Session()
-# sess.run(tf.global_variables_initializer())
-#
-# for i in range(train_steps):
-#     trainer.run({x: x_train, y_un: y_train}, sess)
-#
-# w_value=w.eval(sess)
-# b_value=b.eval(sess)
-#
-# sess.close()
-#
-# # # Create new graph for exporting
-# graph_model = tf.Graph()
-# with graph_model.as_default():
-#     x_model = tf.placeholder("float", [None, 784], name="input")
-#     y_model = tf.nn.softmax(tf.matmul(x_model, w_value) + b_value, name="output")
-#
-#     sess_model = tf.Session()
-#     sess_model.run(tf.global_variables_initializer())
-#
-#     tf.train.write_graph(graph_model.as_graph_def(), './model','mn.pb', as_text=False)
+
+x = tf.placeholder(tf.float32, shape=[None, 784],name='input_m')
+y_un = tf.placeholder(tf.float32, shape=[None, 10],name='y_un')
+
+w = tf.Variable(tf.zeros([784,10]),name='w')
+b = tf.Variable(tf.zeros([10]),name='b')
+
+y = tf.nn.softmax(tf.matmul(x,w) + b,name='output_known')
+
+loss = -tf.reduce_sum(y_un * tf.log(y))
+trainer= tf.train.GradientDescentOptimizer(0.01).minimize(loss)
+
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+
+for i in range(train_steps):
+    trainer.run({x: image_data, y_un: label_data}, sess)
+
+w_value=w.eval(sess)
+b_value=b.eval(sess)
+
+sess.close()
+
+# # Create new graph for exporting
+graph_model = tf.Graph()
+with graph_model.as_default():
+    x_model = tf.placeholder("float", [None, 784], name="input")
+    y_model = tf.nn.softmax(tf.matmul(x_model, w_value) + b_value, name="output")
+
+    sess_model = tf.Session()
+    sess_model.run(tf.global_variables_initializer())
+
+    tf.train.write_graph(graph_model.as_graph_def(), './model','mn.pb', as_text=False)
 
