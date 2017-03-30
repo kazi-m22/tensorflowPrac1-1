@@ -13,8 +13,20 @@ def PIL2array(img):
 for filename in glob2.glob('data/*/**.*'):
     if((path.splitext(filename)[1][1:]) in imgExt):
 
-        img=Image.open(filename)
-        image_list.append(img)
+        im = Image.open(filename)
+        threshold = 200
+        im = im.resize((28, 28), Image.ANTIALIAS)
+        im = im.point(lambda p: p > threshold and 255)
+
+        na = PIL2array(im)
+        na = na[:, :, 0]
+
+        img = (na > na.mean()) * 255
+        np.place(na, na < 255, 1)
+        np.place(na, na == 255, 0)
+        # fa=na.flatten()
+        fa = na.reshape([1, 784])
+        image_list.append(fa)
 
 
-image_list[500].show()
+print(image_list[500])
