@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="913b6c98-2dda-4d12-86cf-f4a3daf0918f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ownTrain/trainTest.py" afterPath="$PROJECT_DIR$/ownTrain/trainTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnist3/3.py" afterPath="$PROJECT_DIR$/mnist3/3.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnist3/3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trainTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trainTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ownTrain/trainTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test4.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ownTrain/test4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-94">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -116,8 +116,8 @@
         <option value="$PROJECT_DIR$/ownTrain/test4.py" />
         <option value="$PROJECT_DIR$/useCase/1.py" />
         <option value="$PROJECT_DIR$/ownTrain/new3.py" />
-        <option value="$PROJECT_DIR$/mnist3/3.py" />
         <option value="$PROJECT_DIR$/ownTrain/trainTest.py" />
+        <option value="$PROJECT_DIR$/mnist3/3.py" />
       </list>
     </option>
   </component>
@@ -1602,7 +1602,7 @@
       </FILE-GROUP>
     </UpdatedFiles>
   </component>
-  <component name="RunManager" selected="Python.trainTest">
+  <component name="RunManager" selected="Python.3">
     <configuration default="false" name="3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1831,8 +1831,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.trainTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.3" />
+        <item index="0" class="java.lang.String" itemvalue="Python.3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.trainTest" />
         <item index="2" class="java.lang.String" itemvalue="Python.new3" />
         <item index="3" class="java.lang.String" itemvalue="Python.test4" />
         <item index="4" class="java.lang.String" itemvalue="Python.1 (3)" />
@@ -1986,7 +1986,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490854412722</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="31">
+      <created>1490854495364</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1490854495364</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2043,7 +2050,8 @@
     <MESSAGE value="28" />
     <MESSAGE value="29" />
     <MESSAGE value="30" />
-    <option name="LAST_COMMIT_MESSAGE" value="30" />
+    <MESSAGE value="31" />
+    <option name="LAST_COMMIT_MESSAGE" value="31" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2347,10 +2355,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist3/3.py">
+    <entry file="file://$PROJECT_DIR$/mnist3/2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        <state relative-caret-position="612">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
@@ -2367,30 +2375,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist3/2.py">
+    <entry file="file://$PROJECT_DIR$/mnist3/3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ownTrain/test4.py">
+    <entry file="file://$PROJECT_DIR$/ownTrain/trainTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ownTrain/trainTest.py">
+    <entry file="file://$PROJECT_DIR$/ownTrain/test4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="-94">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>

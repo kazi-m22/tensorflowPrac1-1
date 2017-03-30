@@ -4,10 +4,8 @@ from tensorflow.python.platform import gfile
 import matplotlib.pyplot as plt
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 #
-x_test = mnist.test.images[1:2,:]
-img=x_test[0]
-
-mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
+# x_test = mnist.test.images[1:2,:]
+# img=x_test[0]
 
 # sess= tf.Session()
 # print("load graph")
@@ -18,7 +16,7 @@ mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 #     tf.import_graph_def(graph_def, name='')
 # print("map variables")
 
-x_test = mnist.test.images[0:1, :]
+x_test = mnist.test.images[0:2, :]
 im = x_test
 
 # x=tf.get_default_graph().get_tensor_by_name('input:0')
@@ -31,4 +29,4 @@ im = x_test
 # plt.imshow(im, cmap=plt.get_cmap('gray_r'))
 # plt.show()
 
-# print(im)
+print(x_test.shape)
