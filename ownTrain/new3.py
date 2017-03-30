@@ -28,3 +28,10 @@ for filename in glob2.glob('data/*/**.*'):
 
 
 print(image_list[500])
+
+label = []
+
+for l1 in range(0,10):
+    for l2 in range(0,120):
+        label.append(l1)
+print(label[500])
