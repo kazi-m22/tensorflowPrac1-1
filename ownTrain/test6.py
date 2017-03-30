@@ -27,4 +27,4 @@ def conver(nu):
     con_a[nu]=1
     return con_a
 
-conver(1)
+print(conver(1))

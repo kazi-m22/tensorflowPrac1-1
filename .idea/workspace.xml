@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="913b6c98-2dda-4d12-86cf-f4a3daf0918f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ownTrain/test5.py" afterPath="$PROJECT_DIR$/ownTrain/test5.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ownTrain/test6.py" afterPath="$PROJECT_DIR$/ownTrain/test6.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ownTrain/trainTest.py" afterPath="$PROJECT_DIR$/ownTrain/trainTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,8 +85,8 @@
       <file leaf-file-name="trainTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ownTrain/trainTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="50" column="0" selection-start-line="49" selection-start-column="23" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="145">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -111,8 +109,8 @@
       <file leaf-file-name="test6.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ownTrain/test6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="27" selection-end-column="16" />
+            <state relative-caret-position="408">
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -155,8 +153,8 @@
         <option value="$PROJECT_DIR$/ownTrain/new3.py" />
         <option value="$PROJECT_DIR$/mnist3/3.py" />
         <option value="$PROJECT_DIR$/ownTrain/test5.py" />
-        <option value="$PROJECT_DIR$/ownTrain/test6.py" />
         <option value="$PROJECT_DIR$/ownTrain/trainTest.py" />
+        <option value="$PROJECT_DIR$/ownTrain/test6.py" />
       </list>
     </option>
   </component>
@@ -421,7 +419,7 @@
       </FILE-GROUP>
     </UpdatedFiles>
   </component>
-  <component name="RunManager" selected="Python.trainTest">
+  <component name="RunManager" selected="Python.test6">
     <configuration default="false" name="3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -650,8 +648,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.trainTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test6" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test6" />
+        <item index="1" class="java.lang.String" itemvalue="Python.trainTest" />
         <item index="2" class="java.lang.String" itemvalue="Python.3" />
         <item index="3" class="java.lang.String" itemvalue="Python.test5" />
         <item index="4" class="java.lang.String" itemvalue="Python.new3" />
@@ -840,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490899669153</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="36">
+      <created>1490900730915</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1490900730915</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -902,7 +907,8 @@
     <MESSAGE value="33" />
     <MESSAGE value="34" />
     <MESSAGE value="35" />
-    <option name="LAST_COMMIT_MESSAGE" value="35" />
+    <MESSAGE value="36" />
+    <option name="LAST_COMMIT_MESSAGE" value="36" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1222,14 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ownTrain/test6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ownTrain/test5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1240,10 +1238,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ownTrain/test6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ownTrain/trainTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="50" column="0" selection-start-line="49" selection-start-column="23" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="145">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
