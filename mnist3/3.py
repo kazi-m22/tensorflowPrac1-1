@@ -16,7 +16,7 @@ mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 #     tf.import_graph_def(graph_def, name='')
 # print("map variables")
 
-x_test = mnist.test.images[0:2, :]
+x_test = mnist.test.images[:, :]
 im = x_test
 
 # x=tf.get_default_graph().get_tensor_by_name('input:0')
