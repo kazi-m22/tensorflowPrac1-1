@@ -9,4 +9,4 @@ for i in range(0,1200):
 
 
 c= np.column_stack((a,b))
-print(im.shape)
+print(c.shape)

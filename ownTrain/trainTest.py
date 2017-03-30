@@ -46,7 +46,7 @@ for i in range(1200):
 
 image_data= np.column_stack((counter,image_list))
 
-print(image_data.shape)
+print(image_list[0].shape)
 # num=5000
 # train_steps=2500
 #
