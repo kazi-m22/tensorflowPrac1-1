@@ -45,8 +45,8 @@ for l1 in range(0,10):
 num=5000
 train_steps=2500
 
-x_train=np.asarray(image_list)
-y_train=np.asarray(label)
+x_train=image_list[:1200,:]
+y_train=label[:1200,:]
 
 x = tf.placeholder(tf.float32, shape=[None, 784],name='input_m')
 y_un = tf.placeholder(tf.float32, shape=[None, 10],name='y_un')
