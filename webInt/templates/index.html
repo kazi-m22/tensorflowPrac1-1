@@ -17,6 +17,11 @@
 </div>
 
 <button onclick="copyURL();" onmouseover="saveImageAs();">Copy Image URL</button>
+
+<form action="." method="POST">
+        <input type="text" name="text">
+        <input type="submit" name="my-form" value="Send">
+</form>
 <h1>{{name}}</h1>
 
 <script>
@@ -46,6 +51,7 @@ var dataURL;
 function saveImageAs () {
   var canvas = document.getElementById('c');
   dataURL = canvas.toDataURL();
+  document.getElementById("text").value =dataURL;
   //document.write(dataURL);
   
 };
