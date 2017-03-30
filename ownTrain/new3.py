@@ -1,11 +1,20 @@
-import matplotlib.pyplot as plt
 import os.path as path
 import glob2
+from PIL import Image
+import numpy as np
 image_list = []
 imgExt = ("png","jpg","jpeg")
+
+def PIL2array(img):
+    return np.array(img.getdata(),
+                    np.uint8).reshape(img.size[1], img.size[0], 3)
+
+
 for filename in glob2.glob('data/*/**.*'):
     if((path.splitext(filename)[1][1:]) in imgExt):
-        img=plt.imread(filename)
+
+        img=Image.open(filename)
         image_list.append(img)
 
-print(len(image_list))
+
+image_list[500].show()
