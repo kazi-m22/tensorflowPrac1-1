@@ -33,7 +33,7 @@ for filename in glob2.glob('data/*/**.*'):
 print(len(image_list))
 # print(image_list)
 
-label = [10]
+label = []
 
 for l1 in range(0,10):
     for l2 in range(0,120):

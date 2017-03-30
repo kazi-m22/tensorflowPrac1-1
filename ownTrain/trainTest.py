@@ -14,6 +14,11 @@ def PIL2array(img):
     return np.array(img.getdata(),
                     np.uint8).reshape(img.size[1], img.size[0])
 
+def conver(nu):
+    con_a=np.zeros(10)
+    con_a[nu]=1
+    return con_a
+
 
 for filename in glob2.glob('data/*/**.*'):
     if((path.splitext(filename)[1][1:]) in imgExt):
@@ -37,12 +42,12 @@ for filename in glob2.glob('data/*/**.*'):
 label = []
 for l1 in range(0,10):
     for l2 in range(0,120):
-        label.append(l1)
+        label.append(conver(l1))
 # print(label[500])
 
 image_data=np.array(image_list)
-
-print(image_data.shape)
+label_data=np.array(label)
+print(label_data.shape)
 
 # num=5000
 # train_steps=2500
